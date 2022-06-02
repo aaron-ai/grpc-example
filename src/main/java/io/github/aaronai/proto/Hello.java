@@ -1172,7 +1172,7 @@ public final class Hello {
       "\n\035io/github/aaronai/hello.proto\022\027io.gith" +
       "ub.aaronai.proto\"*\n\017SayHelloRequest\022\027\n\017r" +
       "equest_content\030\001 \001(\t\",\n\020SayHelloResponse" +
-      "\022\030\n\020response_content\030\001 \001(\t2\334\001\n\010sayHello\022" +
+      "\022\030\n\020response_content\030\001 \001(\t2\334\001\n\010SayHello\022" +
       "^\n\005Unary\022(.io.github.aaronai.proto.SayHe" +
       "lloRequest\032).io.github.aaronai.proto.Say" +
       "HelloResponse\"\000\022p\n\023BidirectionalStream\022(" +

@@ -10,7 +10,7 @@ message SayHelloResponse {
   string response_content = 1;
 }
 
-service sayHello{
+service SayHello{
   rpc Unary(SayHelloRequest) returns (SayHelloResponse) {}
 
   rpc BidirectionalStream(stream SayHelloRequest) returns (stream SayHelloResponse) {}

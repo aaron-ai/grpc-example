@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.45.0)",
     comments = "Source: io/github/aaronai/hello.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class sayHelloGrpc {
+public final class SayHelloGrpc {
 
-  private sayHelloGrpc() {}
+  private SayHelloGrpc() {}
 
-  public static final String SERVICE_NAME = "io.github.aaronai.proto.sayHello";
+  public static final String SERVICE_NAME = "io.github.aaronai.proto.SayHello";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<io.github.aaronai.proto.Hello.SayHelloRequest,
@@ -26,10 +26,10 @@ public final class sayHelloGrpc {
   public static io.grpc.MethodDescriptor<io.github.aaronai.proto.Hello.SayHelloRequest,
       io.github.aaronai.proto.Hello.SayHelloResponse> getUnaryMethod() {
     io.grpc.MethodDescriptor<io.github.aaronai.proto.Hello.SayHelloRequest, io.github.aaronai.proto.Hello.SayHelloResponse> getUnaryMethod;
-    if ((getUnaryMethod = sayHelloGrpc.getUnaryMethod) == null) {
-      synchronized (sayHelloGrpc.class) {
-        if ((getUnaryMethod = sayHelloGrpc.getUnaryMethod) == null) {
-          sayHelloGrpc.getUnaryMethod = getUnaryMethod =
+    if ((getUnaryMethod = SayHelloGrpc.getUnaryMethod) == null) {
+      synchronized (SayHelloGrpc.class) {
+        if ((getUnaryMethod = SayHelloGrpc.getUnaryMethod) == null) {
+          SayHelloGrpc.getUnaryMethod = getUnaryMethod =
               io.grpc.MethodDescriptor.<io.github.aaronai.proto.Hello.SayHelloRequest, io.github.aaronai.proto.Hello.SayHelloResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Unary"))
@@ -38,7 +38,7 @@ public final class sayHelloGrpc {
                   io.github.aaronai.proto.Hello.SayHelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.github.aaronai.proto.Hello.SayHelloResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new sayHelloMethodDescriptorSupplier("Unary"))
+              .setSchemaDescriptor(new SayHelloMethodDescriptorSupplier("Unary"))
               .build();
         }
       }
@@ -57,10 +57,10 @@ public final class sayHelloGrpc {
   public static io.grpc.MethodDescriptor<io.github.aaronai.proto.Hello.SayHelloRequest,
       io.github.aaronai.proto.Hello.SayHelloResponse> getBidirectionalStreamMethod() {
     io.grpc.MethodDescriptor<io.github.aaronai.proto.Hello.SayHelloRequest, io.github.aaronai.proto.Hello.SayHelloResponse> getBidirectionalStreamMethod;
-    if ((getBidirectionalStreamMethod = sayHelloGrpc.getBidirectionalStreamMethod) == null) {
-      synchronized (sayHelloGrpc.class) {
-        if ((getBidirectionalStreamMethod = sayHelloGrpc.getBidirectionalStreamMethod) == null) {
-          sayHelloGrpc.getBidirectionalStreamMethod = getBidirectionalStreamMethod =
+    if ((getBidirectionalStreamMethod = SayHelloGrpc.getBidirectionalStreamMethod) == null) {
+      synchronized (SayHelloGrpc.class) {
+        if ((getBidirectionalStreamMethod = SayHelloGrpc.getBidirectionalStreamMethod) == null) {
+          SayHelloGrpc.getBidirectionalStreamMethod = getBidirectionalStreamMethod =
               io.grpc.MethodDescriptor.<io.github.aaronai.proto.Hello.SayHelloRequest, io.github.aaronai.proto.Hello.SayHelloResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BidirectionalStream"))
@@ -69,7 +69,7 @@ public final class sayHelloGrpc {
                   io.github.aaronai.proto.Hello.SayHelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.github.aaronai.proto.Hello.SayHelloResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new sayHelloMethodDescriptorSupplier("BidirectionalStream"))
+              .setSchemaDescriptor(new SayHelloMethodDescriptorSupplier("BidirectionalStream"))
               .build();
         }
       }
@@ -80,50 +80,50 @@ public final class sayHelloGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static sayHelloStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<sayHelloStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<sayHelloStub>() {
+  public static SayHelloStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SayHelloStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SayHelloStub>() {
         @java.lang.Override
-        public sayHelloStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new sayHelloStub(channel, callOptions);
+        public SayHelloStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SayHelloStub(channel, callOptions);
         }
       };
-    return sayHelloStub.newStub(factory, channel);
+    return SayHelloStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static sayHelloBlockingStub newBlockingStub(
+  public static SayHelloBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<sayHelloBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<sayHelloBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<SayHelloBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SayHelloBlockingStub>() {
         @java.lang.Override
-        public sayHelloBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new sayHelloBlockingStub(channel, callOptions);
+        public SayHelloBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SayHelloBlockingStub(channel, callOptions);
         }
       };
-    return sayHelloBlockingStub.newStub(factory, channel);
+    return SayHelloBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static sayHelloFutureStub newFutureStub(
+  public static SayHelloFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<sayHelloFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<sayHelloFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<SayHelloFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SayHelloFutureStub>() {
         @java.lang.Override
-        public sayHelloFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new sayHelloFutureStub(channel, callOptions);
+        public SayHelloFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SayHelloFutureStub(channel, callOptions);
         }
       };
-    return sayHelloFutureStub.newStub(factory, channel);
+    return SayHelloFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class sayHelloImplBase implements io.grpc.BindableService {
+  public static abstract class SayHelloImplBase implements io.grpc.BindableService {
 
     /**
      */
@@ -161,16 +161,16 @@ public final class sayHelloGrpc {
 
   /**
    */
-  public static final class sayHelloStub extends io.grpc.stub.AbstractAsyncStub<sayHelloStub> {
-    private sayHelloStub(
+  public static final class SayHelloStub extends io.grpc.stub.AbstractAsyncStub<SayHelloStub> {
+    private SayHelloStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected sayHelloStub build(
+    protected SayHelloStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new sayHelloStub(channel, callOptions);
+      return new SayHelloStub(channel, callOptions);
     }
 
     /**
@@ -192,16 +192,16 @@ public final class sayHelloGrpc {
 
   /**
    */
-  public static final class sayHelloBlockingStub extends io.grpc.stub.AbstractBlockingStub<sayHelloBlockingStub> {
-    private sayHelloBlockingStub(
+  public static final class SayHelloBlockingStub extends io.grpc.stub.AbstractBlockingStub<SayHelloBlockingStub> {
+    private SayHelloBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected sayHelloBlockingStub build(
+    protected SayHelloBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new sayHelloBlockingStub(channel, callOptions);
+      return new SayHelloBlockingStub(channel, callOptions);
     }
 
     /**
@@ -214,16 +214,16 @@ public final class sayHelloGrpc {
 
   /**
    */
-  public static final class sayHelloFutureStub extends io.grpc.stub.AbstractFutureStub<sayHelloFutureStub> {
-    private sayHelloFutureStub(
+  public static final class SayHelloFutureStub extends io.grpc.stub.AbstractFutureStub<SayHelloFutureStub> {
+    private SayHelloFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected sayHelloFutureStub build(
+    protected SayHelloFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new sayHelloFutureStub(channel, callOptions);
+      return new SayHelloFutureStub(channel, callOptions);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class sayHelloGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final sayHelloImplBase serviceImpl;
+    private final SayHelloImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(sayHelloImplBase serviceImpl, int methodId) {
+    MethodHandlers(SayHelloImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -278,9 +278,9 @@ public final class sayHelloGrpc {
     }
   }
 
-  private static abstract class sayHelloBaseDescriptorSupplier
+  private static abstract class SayHelloBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    sayHelloBaseDescriptorSupplier() {}
+    SayHelloBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -289,21 +289,21 @@ public final class sayHelloGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("sayHello");
+      return getFileDescriptor().findServiceByName("SayHello");
     }
   }
 
-  private static final class sayHelloFileDescriptorSupplier
-      extends sayHelloBaseDescriptorSupplier {
-    sayHelloFileDescriptorSupplier() {}
+  private static final class SayHelloFileDescriptorSupplier
+      extends SayHelloBaseDescriptorSupplier {
+    SayHelloFileDescriptorSupplier() {}
   }
 
-  private static final class sayHelloMethodDescriptorSupplier
-      extends sayHelloBaseDescriptorSupplier
+  private static final class SayHelloMethodDescriptorSupplier
+      extends SayHelloBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    sayHelloMethodDescriptorSupplier(String methodName) {
+    SayHelloMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -318,11 +318,11 @@ public final class sayHelloGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (sayHelloGrpc.class) {
+      synchronized (SayHelloGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new sayHelloFileDescriptorSupplier())
+              .setSchemaDescriptor(new SayHelloFileDescriptorSupplier())
               .addMethod(getUnaryMethod())
               .addMethod(getBidirectionalStreamMethod())
               .build();
