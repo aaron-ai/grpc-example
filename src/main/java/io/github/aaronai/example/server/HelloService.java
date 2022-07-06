@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class HelloService extends SayHelloGrpc.SayHelloImplBase {
+
+    @Override
     public StreamObserver<SayHelloRequest> bidirectionalStream(StreamObserver<SayHelloResponse> responseObserver) {
         return new StreamObserver<SayHelloRequest>() {
             @Override
@@ -19,17 +21,19 @@ public class HelloService extends SayHelloGrpc.SayHelloImplBase {
 
             @Override
             public void onError(Throwable throwable) {
+                responseObserver.onError(throwable);
             }
 
             @Override
             public void onCompleted() {
+                responseObserver.onCompleted();
             }
         };
     }
 
     public void unary(SayHelloRequest request, StreamObserver<SayHelloResponse> responseObserver) {
         log.info("receive request={}", request);
-        SayHelloResponse response = SayHelloResponse.newBuilder().setResponseContent("This is streaming request").build();
+        SayHelloResponse response = SayHelloResponse.newBuilder().setResponseContent("This is unary request").build();
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

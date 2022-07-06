@@ -13,7 +13,8 @@ public class HelloServer {
 
     public HelloServer(int port) {
         this.service = new HelloService();
-        this.server = ServerBuilder.forPort(port).addService(service).build();
+        this.server = ServerBuilder.forPort(port).addService(service)
+        .build();
         this.port = port;
     }
 
