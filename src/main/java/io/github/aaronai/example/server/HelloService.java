@@ -13,23 +13,26 @@ public class HelloService extends SayHelloGrpc.SayHelloImplBase {
             @Override
             public void onNext(SayHelloRequest request) {
                 log.info("Receive streaming request={}", request);
-                SayHelloResponse response = SayHelloResponse.newBuilder().setResponseContent("This is streaming response").build();
+                SayHelloResponse response = SayHelloResponse.newBuilder().setResponseContent("This is streaming "
+                    + "response").build();
                 responseObserver.onNext(response);
             }
 
             @Override
-            public void onError(Throwable throwable) {
+            public void onError(Throwable t) {
             }
 
             @Override
             public void onCompleted() {
+                log.info("request observer is completed");
+                responseObserver.onCompleted();
             }
         };
     }
 
     public void unary(SayHelloRequest request, StreamObserver<SayHelloResponse> responseObserver) {
         log.info("receive request={}", request);
-        SayHelloResponse response = SayHelloResponse.newBuilder().setResponseContent("This is streaming request").build();
+        SayHelloResponse response = SayHelloResponse.newBuilder().setResponseContent("This is unary request").build();
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

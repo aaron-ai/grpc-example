@@ -34,6 +34,9 @@ public class StubExample {
         final StreamObserver<SayHelloRequest> requestObserver = stub.bidirectionalStream(responseObserver);
         SayHelloRequest request = SayHelloRequest.newBuilder().setRequestContent("request").build();
         requestObserver.onNext(request);
-        Thread.sleep(100000);
+        Thread.sleep(3000);
+        requestObserver.onCompleted();
+        Thread.sleep(9999999);
+
     }
 }
